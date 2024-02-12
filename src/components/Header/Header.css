@@ -1,0 +1,39 @@
+/* Style for the navigation container */
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  /* Style for the menu items */
+  .menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Style for active menu item */
+  .menu a.active {
+    background-color: #ddd;
+  }
+  
+  /* Style for the social links */
+  .social a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Style for the icons */
+  .material-icons,
+  .devicon-github-plain,
+  .devicon-wordpress-plain,
+  .devicon-twitter-plain,
+  .devicon-facebook-plain {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  

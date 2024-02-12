@@ -1,14 +1,20 @@
 import React from 'react';
+import "./Header.css";
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import SettingsApplicationsRoundedIcon from '@mui/icons-material/SettingsApplicationsRounded';
+import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 
 const Header = () => {
   return (
     <nav>
       <div className="menu">
-        <a href="#home" className="active scroll-page"><i className="material-icons">home</i></a><br />
-        <a href="#about" className="scroll-page"><i className="material-icons">account_circle</i></a><br />
-        <a href="#skills" className="scroll-page"><i className="material-icons">settings</i></a><br />
-        <a href="#works" className="scroll-page"><i className="material-icons">work</i></a><br />
-        <a href="#contact" className="scroll-page"><i className="material-icons">mail</i></a><br />
+        <a href="#home" className="active scroll-page"><HomeRoundedIcon /> Home</a><br />
+        <a href="#about" className="scroll-page"><AccountCircleRoundedIcon /> About</a><br />
+        <a href="#skills" className="scroll-page"><SettingsApplicationsRoundedIcon /> Skills</a><br />
+        <a href="#works" className="scroll-page"><WorkRoundedIcon /> Projects</a><br />
+        <a href="#contact" className="scroll-page"><EmailRoundedIcon /> Contact Me</a><br />
       </div>
       <div className="social">
         <a href="https://github.com/RidhoBeteer" target="_blank" rel="noopener noreferrer"><i className="devicon-github-plain"></i></a><br />
