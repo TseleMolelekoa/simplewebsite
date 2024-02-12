@@ -8,14 +8,15 @@
     background-image: url("../Assets/assets/animated-man-computer-coding-nae6mec378lsg1i3.gif");
   }
 
-  .logo-section {
+  .logo-section img {
     /* Style for the logo section */
-    position: absolute;
-    left: -28px;
-    top: -97px;
-    border-radius: 145px;
-    width: 288px;
-    height: 266px;
+    border-radius: 510px;
+    margin-top: 10rem;
+    position:absolute;
+    left: 28px;
+    top: -195px;
+    width: 253px;
+    height: 222px;
   }
   
   
@@ -38,17 +39,82 @@
   }
   
 .welcome-Text{
-    margin-right: -1050px;
-    font-size: 26px;
-    margin-bottom: 10px;
-    color: rgb(241, 241, 232);
+    /* Welcome to my website */
+position: absolute;
+width: 294px;
+height: 134px;
+left: 1500px;
+top: 650px;
+
+font-family: 'Jaldi';
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 31px;
+text-align: center;
+letter-spacing: 0.75em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+.downloadcv-button .download {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 46px;
+    gap: 10px;
+    /* Shadow Group */
+    box-shadow: 0px 90px 28px -10px rgba(158, 160, 163, 0.12), 0px 29px 88px -4px rgba(0, 0, 0, 0.911);
+    border-radius: 50px;
+    /* Download CV */
+    width: 250px;
+    height: 76px;
+    font-family: 'Jaldi';
+    font-style:oblique;
+    font-weight: 200;
+    font-size: 22px;
+    /* identical to box height */
+    display: flex;
+    align-items:center;
+    background-color: #19738a;
+    margin-left: -744px;
+    margin-top: -240px;
 }
 
-.image{
-    margin-top: 96PX;
-    height: 33vh;
-}
-
-
-
-
+/* contact button */
+.contact-button .contact {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 46px;
+    gap: 10px;
+  
+    position: absolute;
+    width: 250px;
+    height: 76px;
+    left: 883px;
+    top: 616px;
+    background: #f2f2f2;
+    /* Shadow Group */
+    box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+    border-radius: 50px;
+    /* Contact me */
+    font-family: 'Jaldi';
+    font-style: italic; /* Changed from oblique */
+    font-weight: 400;
+    font-size: 28px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid black; /* Set border to black */
+    color: darkgray;
+    padding: 0.5rem 1rem;
+  
+    cursor: pointer;
+  }
+  
