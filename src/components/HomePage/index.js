@@ -1,16 +1,26 @@
 import React from "react";
 import Header from "../Header";
 import "./HomePage.css"; // Import of the CSS file
+import Logo2 from "../../components/Assets/assets/logo2.png"; // Correct the import path
 
 const HomePage = () => {
   return (
     <div className="home-container">
       <Header />
-      <div className= "welcome-Text">
-      <h1>Welcome to My Website <br/> My Name Is Tsele Molelekoa</h1>
+      <div className="logo-section">
+        <img src={Logo2} alt="Logo" /> 
+      </div>
+      <div className="welcome-Text">
+        <h1>Welcome to My Website <br/> My Name Is Tsele Molelekoa</h1>
       </div>
       <div className="content">
-        <p>I am a Junior Sofware Developer From South Africa</p>
+        <p>I am a Junior Software Developer From South Africa</p>
+      </div>
+      <div className="button-container">
+        <button className="center-button">Download CV</button>
+      </div>
+      <div className="bottom-left-button">
+        <button>Contact Me</button> {/* Corrected the button text */}
       </div>
     </div>
   );

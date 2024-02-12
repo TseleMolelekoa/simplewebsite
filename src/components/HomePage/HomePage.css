@@ -7,6 +7,17 @@
     align-items: center;
     background-image: url("../Assets/assets/animated-man-computer-coding-nae6mec378lsg1i3.gif");
   }
+
+  .logo-section {
+    /* Style for the logo section */
+    position: absolute;
+    left: -28px;
+    top: -97px;
+    border-radius: 145px;
+    width: 288px;
+    height: 266px;
+  }
+  
   
   .content {
     text-align:left;
@@ -32,3 +43,12 @@
     margin-bottom: 10px;
     color: rgb(241, 241, 232);
 }
+
+.image{
+    margin-top: 96PX;
+    height: 33vh;
+}
+
+
+
+
