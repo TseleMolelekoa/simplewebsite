@@ -6,9 +6,11 @@ const HomePage = () => {
   return (
     <div className="home-container">
       <Header />
+      <div className= "welcome-Text">
+      <h1>Welcome to My Website <br/> My Name Is Tsele Molelekoa</h1>
+      </div>
       <div className="content">
-        <h1>Welcome to My Website</h1>
-        <p>This is the home page content.</p>
+        <p>I am a Junior Sofware Developer From South Africa</p>
       </div>
     </div>
   );
