@@ -1,0 +1,26 @@
+.home-container {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Assets/assets/animated-man-computer-coding-nae6mec378lsg1i3.gif");
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  

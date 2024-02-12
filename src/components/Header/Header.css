@@ -2,8 +2,15 @@
 nav {
     display: flex;
     flex-direction: column;
-    background-color: #f4f4f4;
+    background-color: #d8e1e9;
     width: 200px; /* Adjust width as needed */
+    position: relative;
+    margin-left: -750px;
+    margin-top: -150px;
+    /* Border radius for curl effect */
+    border-radius: 0 30% 30% 0;
+     /* Background color with transparency */
+    background-color: rgba(255, 255, 255, 0.9);
   }
   
   /* Style for the menu items */
@@ -11,7 +18,7 @@ nav {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #1b1919;
   }
   
   /* Style for active menu item */
