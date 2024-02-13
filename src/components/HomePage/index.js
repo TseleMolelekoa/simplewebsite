@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../Header";
+import Header from "../Header";
 import "./HomePage.css"; // Import of the CSS file
 import Logo2 from "../../components/Assets/assets/logo2.png"; // Correct the import path
 
