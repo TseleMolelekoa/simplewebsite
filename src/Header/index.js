@@ -1,10 +1,12 @@
 import React from 'react';
 import "./Header.css";
+import { GitHub, Email, LinkedIn } from '@mui/icons-material';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import SettingsApplicationsRoundedIcon from '@mui/icons-material/SettingsApplicationsRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+
 
 const Header = () => {
   return (
@@ -17,10 +19,10 @@ const Header = () => {
         <a href="#contact" className="scroll-page"><EmailRoundedIcon /> Contact Me</a><br />
       </div>
       <div className="social">
-        <a href="https://github.com/RidhoBeteer" target="_blank" rel="noopener noreferrer"><i className="devicon-github-plain"></i></a><br />
-        <a href="http://beteer.wpdevcloud.com" target="_blank" rel="noopener noreferrer"><i className="devicon-wordpress-plain"></i></a><br />
-        <a href="https://twitter.com/ridhobeteer" target="_blank" rel="noopener noreferrer"><i className="devicon-twitter-plain"></i></a><br />
-        <a href="https://www.facebook.com/ridho.beteer" target="_blank" rel="noopener noreferrer"><i className="devicon-facebook-plain"></i></a><br />
+        <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer"><GitHub /> GitHub</a><br />
+        {/* <a href="http://www.discord.com/" target="_blank" rel="noopener noreferrer"><DiscordIcon /></a><br /> */}
+        <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer"><Email /> Mail</a><br />
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><LinkedIn /> LinkedIn</a><br />
       </div>
     </nav>
   );
