@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div>
         <HomePage /> 
-        {/* <AboutMe /> */}
+        <AboutMe />
       </div>
     </Router>
   );

@@ -2,7 +2,6 @@
 nav {
     display: flex;
     flex-direction: column;
-    background-color: #d8e1e9;
     width: 200px; /* Adjust width as needed */
     position: relative;
     margin-top: 224px;
@@ -10,7 +9,7 @@ nav {
     /* Border radius for curl effect */
     border-radius: 0 30% 30% 0;
      /* Background color with transparency */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #d9e0df;
   }
   
   /* Style for the menu items */
@@ -23,7 +22,9 @@ nav {
   
   /* Style for active menu item */
   .menu a.active {
-    background-color: #3b72b9;
+    background-color: #a0a5ac;
+    border-radius: 10% 10% 10% 10%;
+    background-color: hsl(165, 100%, 99%);
   }
   
   /* Style for the social links */

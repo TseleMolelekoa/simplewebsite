@@ -17,7 +17,10 @@ const HomePage = () => {
       </div>
     </div>
           <div className="content">
-            <p>I am a Junior Software Developer From South Africa</p>
+          <marquee behavior="scroll" direction="left">
+        <p>@2024. Copyrights reserved. I am a Junior Software Developer From South Africa</p>
+        </marquee>
+
           </div>
           <div className="downloadcv-button">
             <button className="download">Download CV</button>
