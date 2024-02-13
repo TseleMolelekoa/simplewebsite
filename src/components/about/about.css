@@ -1,9 +1,33 @@
-* {
+about {margin: 0;
     padding: 0;
-    margin: 0;
-  
 
 }
+h2 {
+    text-align: center; /* Center the text horizontally */
+    justify-content: center; /* Center the text vertically */
+    display: flex; /* Use flexbox to center vertically */
+    flex-direction: column; /* Align text vertically */
+    font-style: 'jaldi';
+    font-weight: 400px;
+    font-size: 36px;
+
+  }
+
+  .p {
+    display: flex;
+    flex-wrap: wrap;
+    font-style: 'jaldi';
+    font-weight: 60px;
+    font-size: 18px;
+    margin-top: 150px;
+    position: absolute;
+    width: 657px;
+    height: 361px;
+    left: 300px;
+    top: 198px;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+  }
 /* .container .background{
     position:absolute;
     width: 1207.43px;

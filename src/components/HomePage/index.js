@@ -1,7 +1,8 @@
 import React from "react";
+
+import Logo2 from "../../components/Assets/assets/logo2.png"; // Correct the import path
 import Header from "../Header";
 import "./HomePage.css"; // Import of the CSS file
-import Logo2 from "../../components/Assets/assets/logo2.png"; // Correct the import path
 
 const HomePage = () => {
     return (
@@ -10,9 +11,11 @@ const HomePage = () => {
           <div className="logo-section">
             <img src={Logo2} alt="Logo" /> 
           </div>
-          <div className="welcome-Text">
-            <h1>Welcome to My Website <br/> My Name Is Tsele Molelekoa</h1>
-          </div>
+      <div className="background-wrapper">
+        <div className="welcome-Text">
+          <h1>Welcome to My Website <br/> My Name Is Tsele Molelekoa</h1>
+      </div>
+    </div>
           <div className="content">
             <p>I am a Junior Software Developer From South Africa</p>
           </div>

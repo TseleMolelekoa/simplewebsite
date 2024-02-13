@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <HomePage /> */}
-        <AboutMe />
+        <HomePage /> 
+        {/* <AboutMe /> */}
       </div>
     </Router>
   );

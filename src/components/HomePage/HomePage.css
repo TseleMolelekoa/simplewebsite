@@ -40,22 +40,31 @@
   
 .welcome-Text{
     /* Welcome to my website */
-position: absolute;
+position: relative; /* Make the container positioned */
 width: 294px;
 height: 134px;
-left: 1500px;
-top: 650px;
-
+left: 200px;
+bottom: -450px;
+display: flex;
 font-family: 'Jaldi';
 font-style: normal;
-font-weight: 200;
+font-weight: 170px;
 font-size: 16px;
 line-height: 31px;
 text-align: center;
 letter-spacing: 0.75em;
 text-transform: uppercase;
-
-color: #FFFFFF;
+color: #60d0ec;
+}
+.background-wrapper {
+  position: absolute;
+  width: 700px;
+  height: 1000px;
+  left: 1350px;
+  top: -43px;
+  background: linear-gradient(rgba(189, 212, 223, 0.1) 0%, rgba(145, 184, 201, 0.1) 100%), rgb(20, 67, 88);
+  border-top-left-radius: 1550px;
+  
 }
 .downloadcv-button .download {
     /* Auto layout */
@@ -117,4 +126,6 @@ color: #FFFFFF;
   
     cursor: pointer;
   }
+.HomePage {
   
+}
