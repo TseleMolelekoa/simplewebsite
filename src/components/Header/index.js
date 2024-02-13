@@ -13,7 +13,7 @@ const Header = () => {
     <nav>
       <div className="menu">
         <a href="#home" className="active scroll-page"><HomeRoundedIcon /> Home</a><br />
-        <a href="#about" className="scroll-page"><AccountCircleRoundedIcon /> About</a><br />
+        <a href="../about/index.js" className="scroll-page"><AccountCircleRoundedIcon /> About</a><br />
         <a href="#skills" className="scroll-page"><SettingsApplicationsRoundedIcon /> Skills</a><br />
         <a href="#works" className="scroll-page"><WorkRoundedIcon /> Projects</a><br />
         <a href="#contact" className="scroll-page"><EmailRoundedIcon /> Contact Me</a><br />
