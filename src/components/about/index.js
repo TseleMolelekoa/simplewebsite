@@ -1,16 +1,39 @@
 import React from 'react';
-import Header from '../Header';
 import Circle from '../circle'; // Corrected import statement
 import profileImage from '../Assets/assets/_MG_1509_1.jpg'; // Import your profile image
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded'; // Import HomeRoundedIcon
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded'; // Import AccountCircleRoundedIcon
+import SettingsApplicationsRoundedIcon from '@material-ui/icons/SettingsApplicationsRounded'; // Import SettingsApplicationsRoundedIcon
+import WorkRoundedIcon from '@material-ui/icons/WorkRounded'; // Import WorkRoundedIcon
+import EmailRoundedIcon from '@material-ui/icons/EmailRounded'; // Import EmailRoundedIcon
+import GitHubIcon from '@material-ui/icons/GitHub'; // Import GitHubIcon
+import EmailIcon from '@material-ui/icons/Email'; // Import EmailIcon
+import LinkedInIcon from '@material-ui/icons/LinkedIn'; // Import LinkedInIcon
 import './about.css'; // Import your CSS file
 
 const AboutMe = () => {
   return (
     <div>
-      <Circle />
-      <Header />
-      
       <div className="about-me-container">
+        <div className='triangle'></div>
+        <Circle />
+        <header className='header'>
+          <nav>
+            <div className="menu">
+              <a href="#home" className="active scroll-page"><HomeRoundedIcon /> Home</a><br />
+              <a href="../about/index.js" className="scroll-page"><AccountCircleRoundedIcon /> About</a><br />
+              <a href="#skills" className="scroll-page"><SettingsApplicationsRoundedIcon /> Skills</a><br />
+              <a href="#works" className="scroll-page"><WorkRoundedIcon /> Projects</a><br />
+              <a href="#contact" className="scroll-page"><EmailRoundedIcon /> Contact Me</a><br />
+            </div>
+            <div className="social">
+              <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer"><GitHubIcon /> GitHub</a><br />
+              {/* <a href="http://www.discord.com/" target="_blank" rel="noopener noreferrer"><DiscordIcon /></a><br /> */}
+              <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer"><EmailIcon /> Mail</a><br />
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><LinkedInIcon /> LinkedIn</a><br />
+            </div>
+          </nav>
+        </header>
         <h2 className="about-heading">About Tsele Molelekoa<br/>A Junior Software-Developer</h2>
         <div className="content-container">
           <div className="text">
@@ -24,7 +47,7 @@ const AboutMe = () => {
             <img src={profileImage} alt="Profile" />
           </div>
         </div>
-        </div>
+      </div>
     </div>
   );
 }

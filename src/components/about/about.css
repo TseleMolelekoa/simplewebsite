@@ -1,13 +1,17 @@
+body {
+  background-color: rgb(16, 83, 105);
+}
+
 .about-me-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgba(189, 212, 223, 0.1) 0%, rgba(145, 184, 201, 0.1) 100%), rgb(20, 67, 88);
-  
 }
 
 .about-heading {
-  margin-top: -700px
+  margin-top: 50px;
+  margin-bottom: auto;
+  color: beige;
 }
 
 .content-container {
@@ -20,12 +24,14 @@
 .text {
   flex: 1;
   margin-left: 90px;
+  color: azure;
 }
 
 .image {
   flex: 1;
   display: flex;
-  justify-content:center;
+  justify-content: center;
+  margin-bottom: auto;
 }
 
 .image img {
@@ -33,5 +39,79 @@
   height: 500px;
   margin-right: 400px;
   margin-left: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
 
+
+.circle {
+  position: absolute;
+  width: 830px;
+  height: 830px;
+  left: 521.59px;
+  top: 76.85px;
+  background: radial-gradient(46.81% 47.17% at 50% 50%, rgba(211, 226, 233, 0.504) 0%, rgba(56, 126, 158, 0) 100%);
+  mix-blend-mode: lighten; /* Use hyphens for CSS properties */
+  opacity: 0.74;
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 100px;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-bottom: 460px solid rgb(20, 67, 88); /* Adjust the color and size of the triangle */
+  margin: 0 auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; /* Ensure the triangle is behind other content */
+}
+.header {
+/* Style for the navigation container */
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* Adjust width as needed */
+    position: relative;
+    margin-top: 224px;
+    margin-left: -1637px;
+    /* Border radius for curl effect */
+    border-radius: 0 30% 30% 0;
+     /* Background color with transparency */
+    background-color: #d9e0df;
+  }
+  
+  /* Style for the menu items */
+  .menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #1b1919;
+  }
+  
+  /* Style for active menu item */
+  .menu a.active {
+    background-color: #a0a5ac;
+    border-radius: 10% 10% 10% 10%;
+    background-color: hsl(165, 100%, 99%);
+  }
+  
+  /* Style for the social links */
+  .social a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Style for the icons */
+  .material-icons,
+  .devicon-github-plain,
+  .devicon-wordpress-plain,
+  .devicon-twitter-plain,
+  .devicon-facebook-plain {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
 }
