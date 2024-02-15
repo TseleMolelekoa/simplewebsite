@@ -25,7 +25,7 @@ function Header() {
           </MenuItem>
           <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
           <MenuItem icon={<PeopleOutlinedIcon />}>About</MenuItem>
-          <MenuItem icon={<ReceiptOutlinedIcon />}>Skills</MenuItem>
+          <MenuItem icon={<ReceiptOutlinedIcon />}>Services</MenuItem>
           <MenuItem icon={<SettingsApplicationsRoundedIcon />}>Projects</MenuItem>
           <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
         </Menu>

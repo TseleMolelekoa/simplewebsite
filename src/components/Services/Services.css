@@ -1,0 +1,91 @@
+.flip-card-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+.flip-card {
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+    margin-right: 20px;
+  }
+  
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+.flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+.flip-card-front {
+    background-color: #1eb6b6;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.flip-card-back {
+    background-color: #1c4850;
+    color:lightblue;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.flip-card ul {
+    list-style-type:circle;
+    padding: 0;
+  }
+  
+.flip-card ul li {
+    margin-bottom: 10px;
+  }
+.flip-card-front .img{
+    height:100%;
+    width: auto;
+  }
+
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .icon-grid-item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-grid-item svg {
+    width: 100%;
+    height: 100%;
+    color: lightblue;
+  }
+.heading {
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-style: oblique;
+    font-family: 'jaldi';
+  }
