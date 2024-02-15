@@ -1,7 +1,3 @@
-body {
-  background-color: rgb(16, 83, 105);
-}
-
 .about-me-container {
   display: flex;
   flex-direction: column;

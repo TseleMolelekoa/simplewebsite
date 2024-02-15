@@ -1,49 +1,15 @@
-.home-container {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../Assets/assets/animated-man-computer-coding-nae6mec378lsg1i3.gif");
-  }
-
-  .logo-section img {
-    /* Style for the logo section */
-    border-radius: 510px;
-    margin-top: 10rem;
-    position:absolute;
-    left: 28px;
-    top: -195px;
-    width: 253px;
-    height: 222px;
-  }
-  
-  
-  .content {
-    text-align:left;
-    color: rgb(5, 5, 5);
-  }
-  
-  .content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    position: absolute;
-   
-  }
-  
-  .content p {
-    font-size: 2.2rem;
-    margin-bottom: 100px;
-    
-  }
-  
+/* HomePage.css */
+body {
+  background-image: url(../Assets/assets/animated-man-computer-coding-nae6mec378lsg1i3.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .welcome-Text{
     /* Welcome to my website */
 position: relative; /* Make the container positioned */
 width: 294px;
 height: 134px;
-left: 200px;
+left: 50px;
 bottom: -450px;
 display: flex;
 font-family: 'Jaldi';
@@ -54,75 +20,74 @@ line-height: 31px;
 text-align: center;
 letter-spacing: 0.75em;
 text-transform: uppercase;
-color: #60d0ec;
+color: #a5dae7;
 }
 .background-wrapper {
   position: absolute;
-  width: 700px;
+  width: 500px;
   height: 1000px;
-  left: 1350px;
+  left: 1400px;
   top: -43px;
   background: linear-gradient(rgba(189, 212, 223, 0.1) 0%, rgba(145, 184, 201, 0.1) 100%), rgb(20, 67, 88);
   border-top-left-radius: 1550px;
   
 }
-.downloadcv-button .download {
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 17px 46px;
-    gap: 10px;
-    /* Shadow Group */
-    box-shadow: 0px 90px 28px -10px rgba(158, 160, 163, 0.12), 0px 29px 88px -4px rgba(0, 0, 0, 0.911);
-    border-radius: 50px;
-    /* Download CV */
-    width: 250px;
-    height: 76px;
-    font-family: 'Jaldi';
-    font-style:oblique;
-    font-weight: 200;
-    font-size: 22px;
-    /* identical to box height */
-    display: flex;
-    align-items:center;
-    background-color: #19738a;
-    margin-left: -700px;
-    margin-top: -240px;
+/* Container for buttons */
+.button-container {
+  text-align: center; /* Center align the content */
+  margin-top: -300px; /* Add some margin for spacing */
 }
 
-/* contact button */
-.contact-button .contact {
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 17px 46px;
-    gap: 10px;
-  
-    position: absolute;
-    width: 250px;
-    height: 76px;
-    left: 883px;
-    top: 616px;
-    background: #f2f2f2;
-    /* Shadow Group */
-    box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
-    border-radius: 50px;
-    /* Contact me */
-    font-family: 'Jaldi';
-    font-style: italic; /* Changed from oblique */
-    font-weight: 400;
-    font-size: 28px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid black; /* Set border to black */
-    color: darkgray;
-    padding: 0.5rem 1rem;
-  
-    cursor: pointer;
-  }
+/* Download button */
+.download {
+  background-color: #162727; /* Gray-purple color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download:hover {
+  background-color: hsl(204, 65%, 48%); /* Darker shade of gray-purple on hover */
+}
+.downloadcv-button {
+  margin-right: 578px;
+  cursor: pointer;
+}
+
+/* Contact button */
+.contact {
+  background-color: transparent; /* Transparent background */
+  color: hsl(175, 88%, 22%); /* Gray-purple color */
+  border: 2px solid #0bc5c5; /* Border in gray-purple color */
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  align-content: space-between;
+}
+
+.contact:hover {
+  background-color: hsl(180, 79%, 35%); /* Gray-purple color on hover */
+  color: white;
+}
+
+.social-icons {
+  display: flex; /* Display icons in a row */
+  justify-content: center; /* Center align the icons horizontally */
+  margin-top: 20px; /* Add some margin for spacing */
+}
+
+.social-icons a {
+  margin: 0 90px; /* Add spacing between icons */
+  color: rgb(247, 247, 247); /* Set icon color */
+  font-size: 44px; /* Set icon size */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icons a:hover {
+  color: hsl(211, 55%, 58%); /* Change icon color on hover */
+}
