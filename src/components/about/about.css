@@ -1,3 +1,6 @@
+.bg-color{
+  background-color: rgb(26, 85, 100);
+}
 .about-me-container {
   display: flex;
   flex-direction: column;
@@ -6,7 +9,6 @@
 
 .about-heading {
   margin-top: 50px;
-  margin-bottom: auto;
   color: beige;
 }
 

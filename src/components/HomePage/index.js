@@ -7,7 +7,7 @@ import "./HomePage.css"; // Import of the CSS file
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="body-image">
       <Header />
       <div className="background-wrapper">
         <div className="welcome-Text">

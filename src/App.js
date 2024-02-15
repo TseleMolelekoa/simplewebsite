@@ -1,15 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes from 'react-router-dom'
-import HomePage from './components/HomePage';
-import AboutMe from './components/about';
+import { BrowserRouter as Router } from 'react-router-dom';
+import HomePage from './components/HomePage/index';
+import Services from './components/Services/Services';
+import AboutMe from './components/about/index';
+
+
 
 function App() {
   return (
     <Router>
-      <Routes> {/* Wrap Routes around Route components */}
-        {/* <Route path="/" element={<HomePage />} /> */}
-        <Route path="./components/about/about.jsx" element={<AboutMe />} />
-      </Routes>
+      <div>
+        <HomePage />
+        <AboutMe />
+        <Services />
+      </div>
     </Router>
   );
 }

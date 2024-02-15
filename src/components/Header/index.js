@@ -23,7 +23,6 @@ function Header() {
           >
             <h2>Menu</h2>
           </MenuItem>
-
           <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
           <MenuItem icon={<PeopleOutlinedIcon />}>About</MenuItem>
           <MenuItem icon={<ReceiptOutlinedIcon />}>Skills</MenuItem>
