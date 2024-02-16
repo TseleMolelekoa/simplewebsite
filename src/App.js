@@ -10,9 +10,15 @@ function App() {
   return (
     <Router>
       <div>
+        <div className='home'>
         <HomePage />
-        <AboutMe />
-        <Services />
+        </div>
+        <div className='about'>
+          <AboutMe />
+        </div>
+        <div className='services'>
+          <Services />
+        </div>
       </div>
     </Router>
   );
