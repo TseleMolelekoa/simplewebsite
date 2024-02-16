@@ -1,6 +1,6 @@
 import React from 'react';
 import Circle from '../circle'; // Corrected import statement
-import profileImage from '../Assets/assets/_MG_1509_1.jpg'; // Import your profile image
+import profileImage from '../assets/_MG_1509_1.jpg'; // Import your profile image
 import './about.css'; // Import your CSS file
 import Header from '../Header';
 
