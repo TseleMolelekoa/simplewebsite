@@ -70,8 +70,9 @@ const Projects = () => {
                         </a>
                     </motion.div>
                 </div>
+                <p>Please note that all the above projects are not live as they are all in progress!!!!!</p>
                     <div className="button-container2">
-                        <button>Load More</button>
+                        <button>Load For More</button>
                     </div>
                 </div>
             </div>
