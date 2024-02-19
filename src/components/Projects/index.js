@@ -8,6 +8,9 @@ const Projects = () => {
         <div>
             <h1 className="heading">Projects</h1>
             <div className="projects-page">
+                <div className="gif-container">
+                    <img src={cogGif} alt="GIF" />
+                </div>
                 <div className="component1"></div>
                 <div className="layer-small"></div>
                 <div className="Rectangle_6"></div>
@@ -25,25 +28,52 @@ const Projects = () => {
                 <div className="Rectangle8"></div>
                 <div className="Rectangle9"></div>
                 <div className="Rectangle4"></div>
-                {/* <circle/><div className="gif-container">
-                    <img src={cogGif} alt="GIF" />
-                </div> */}
+                <circle/>
                 <div className="Rectangle6"></div>
                 <div className="shape15"></div>
                 <div className="projects-page">
-                    <div className="cards-container">
-                        <motion.div className="card" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                            <h3>Tech Career website</h3>
-                        </motion.div>
-                        <motion.div className="card" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                            <h3>Banking App using Python</h3>
-                        </motion.div>
-                        <motion.div className="card" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                            <h3>Tax-Calculator using JAVA</h3>
-                        </motion.div>
+                <div className="cards-container">
+                    <motion.div className="card" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <h3>Tech Career website</h3>
+                        <a href="https://github.com/TseleMolelekoa/GroupWebsite" target="_blank">
+                            <motion.button 
+                                className="github-button"
+                                whileHover={{ scale: 1.1, backgroundColor: "#4CAF50", color: "white" }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                GitHub
+                            </motion.button>
+                        </a>
+                    </motion.div>
+                    <motion.div className="card" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <h3>Banking App using Python</h3>
+                        <a href="https://github.com/TseleMolelekoa/BANKCALCULATORAPP" target="_blank">
+                            <motion.button 
+                                className="github-button"
+                                whileHover={{ scale: 1.1, backgroundColor: "#4CAF50", color: "white" }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                GitHub
+                            </motion.button>
+                        </a>
+                    </motion.div>
+                    <motion.div className="card" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <h3>Tax-Calculator using JAVA</h3>
+                        <a href="https://github.com/yourusername/tax-calculator-java" target="_blank">
+                            <motion.button 
+                                className="github-button"
+                                whileHover={{ scale: 1.1, backgroundColor: "#4CAF50", color: "white" }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                GitHub
+                            </motion.button>
+                        </a>
+                    </motion.div>
+                </div>
+                    <div className="button-container2">
+                        <button>Load More</button>
                     </div>
                 </div>
-                
             </div>
         </div>
     );

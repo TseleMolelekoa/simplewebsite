@@ -270,5 +270,48 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.gif-container {
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1; 
+}
+.button-container2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 550px; 
+    position:absolute;
+    height:50px;
+}
 
+.button-container2 button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0a3d46;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.button-container2 button:hover {
+    background-color: #45a049;
+}
+
+.github-button {
+    background-color: transparent;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
