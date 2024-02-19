@@ -9,7 +9,7 @@
 .flip-card {
   width: 400px; /* Added max-width to prevent cards from exceeding this width */
   height: 500px;
-  perspective: 1000px;
+  perspective: 700px;
   margin-right: 30px;
   
 }
@@ -96,9 +96,5 @@
   }
 .icon {
    font-size: 15px;
-  }
-  .education-image {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
   }
   
