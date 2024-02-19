@@ -261,8 +261,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 20px;
-    color: #333333;
+    font-size: 25px;
+    color: #0c0a0a;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-left: 50px;
@@ -306,16 +306,16 @@
 
 .github-button {
     background-color: transparent;
-    color: #4CAF50;
+    color: #657c66;
     border: 2px solid #4CAF50;
     padding: 8px 16px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .github-button:hover {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #101110;
+    color: rgb(41, 37, 37);
 }
