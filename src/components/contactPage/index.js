@@ -56,13 +56,13 @@ const ContactPage = () => {
                 console.error("Error sending message to Firebase:", error);
             });
        // Send the form data to the server
-    axios.post('http://localhost:3000/send-email', {
+    axios.post('http://localhost:3001/api/send-email', {
         name: userData.name,
         email: userData.email,
         phone: userData.phone,
         message: userData.message
     })
-    
+
     .then((response) => {
         if (response.status === 200) {
             console.log("Email sent successfully");
@@ -77,7 +77,14 @@ const ContactPage = () => {
             console.error("Error sending email:", response.data);
         }
     })
-    };
+    .catch((error) => {
+        if (error.response.status === 404) {
+            console.log('The requested resource was not found.');
+        } else {
+            console.log('An error occurred:', error.message);
+        }
+    });
+}
  // Render the component
  return (
     <div className='container'>
@@ -103,6 +110,19 @@ const ContactPage = () => {
                 <button type="submit">Send</button>
             </form>
         </div>
+        <footer className="footer">
+    <ul className="social-links">
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
+        <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-discord"></i></a></li>
+        <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></a></li>
+    </ul>
+    <p className="copyright">
+        &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
+    </p>
+</footer>
+
+
     </div>
 );
 };

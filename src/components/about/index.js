@@ -7,10 +7,9 @@ import Header from '../Header';
 const AboutMe = () => {
   return (
     <div className='bg-color'>
-        
+        <h2 className="about-heading">About Tsele Molelekoa<br/>A Junior Software-Developer</h2>
       <div className="about-me-container">
         <circle />
-        <h2 className="about-heading">About Tsele Molelekoa<br/>A Junior Software-Developer</h2>
         <div className="content-container">
           <div className="text">
             <p className='about_me'>

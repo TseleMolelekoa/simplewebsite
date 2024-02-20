@@ -49,15 +49,15 @@ const EducationCard = () => {
           <briefcase />
         </div>
         <div className="flip-card-back">
-
-          <span>BTech: Project Management Central University of Technology 2019-2021</span>
+          <span>BTech: Project Management Central University of Technology 2019-2021</span><br/>
           <span>Diploma Information Technology Damelin College 2015-2018</span><br/>
-          <span>Matric -Mamello Secondary School 2010-2014</span>
+          <span>Matric - Mamello Secondary School 2010-2014</span>
         </div>
       </div>
     </div>
   );
 };
+
 
 const ExperienceCard = () => {
   return (

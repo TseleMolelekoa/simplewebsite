@@ -6,10 +6,9 @@
     display: flex; /* Add display flex */
     justify-content: center; /* Center align content horizontally */
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height:100vh;
-    width: 96vw;
+    width: 97vw;
     position: relative;
     background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);
     mix-blend-mode: lighten;
@@ -22,10 +21,9 @@
 }
 
   
-  #contact-form {
-    max-width: 70%; /* Adjusted to 100% to make it responsive */
-    padding: 20px;
-    background-color: rgb(208, 221, 221);
+  .contact-form {
+    max-width: 100%; /* Adjusted to 100% to make it responsive */
+    background-color: rgb(38, 86, 100);
   }
   
   .form-group {
@@ -36,21 +34,23 @@
     display:block;
     margin-bottom: 5px;
     align-content: center;
+    font-size: 26px;
   }
   
   input[type="text"],
   input[type="email"],input[type="tel"]{
-    width: 70%;
-    padding: 10px;
+    width: 90%;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 70px;
 
   }
   textarea {
-    width: 70%;
-    padding: 10px;
+    width: 90%;
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 70px;
+    display: fixed;
   }
   
   button[type="submit"] {
@@ -94,4 +94,32 @@
   display: block; /* Display labels as blocks for better spacing */
   margin-bottom: 5px; /* Add some space between labels and inputs */
   font-weight: bold; /* Make labels bold */
+}
+.footer {
+  text-align: center; /* Align icons to the center */
+}
+
+.social-links {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  display: flex; /* Use flexbox to place icons horizontally */
+  justify-content: center; /* Center items horizontally */
+}
+
+.social-links li {
+  margin-right: 10px; /* Add some space between icons */
+}
+
+.social-links a {
+  font-size: 34px; /* Adjust the font size of icons */
+}
+.social-links li:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
+}
+.footer .copyright {
+  margin-top: 10px; /* Add some space between the social links and the copyright notice */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #0e0d0d; /* Change color to match your design */
+  font-style: oblique;
+  font-weight: bolder;
 }

@@ -249,6 +249,7 @@
     margin-top: 30px;
     margin-right: -10px;
     border-radius: 40%;
+    
   }
   
 .flip-card-front {
@@ -260,12 +261,16 @@
   }
   
 .flip-card-back {
-    background-color: #1c4850;
+    
     color:lightblue;
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
+    
+  }
+  .flip-card-back span {
+    margin-bottom: 55px; /* Adjust the value as needed */
   }
   
 .flip-card ul {

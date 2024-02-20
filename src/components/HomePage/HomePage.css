@@ -5,17 +5,15 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-  margin-top: -10px;
-  align-items: flex-start;
   width: 98vw;
 }
 .welcome-Text{
     /* Welcome to my website */
 position: relative; /* Make the container positioned */
 width: 294px;
-height: 134px;
+height: 100px;
 left: 50px;
-bottom: -450px;
+bottom: -200px;
 display: flex;
 font-family: 'Jaldi';
 font-style: normal;
