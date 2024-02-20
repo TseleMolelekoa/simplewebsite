@@ -35,6 +35,7 @@
     background-size: cover;
     perspective: 1000px;
     overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
+    border-radius: 50px;
 }
 
     /* Component 1 */

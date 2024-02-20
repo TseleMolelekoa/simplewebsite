@@ -7,6 +7,7 @@
   padding: 0;
   margin-top: -10px;
   align-items: flex-start;
+  width: 98vw;
 }
 .welcome-Text{
     /* Welcome to my website */
@@ -30,7 +31,7 @@ color: #a5dae7;
   position: absolute;
   width: 500px;
   height: 1000px;
-  left: 1400px;
+  left: 1390px;
   top: -43px;
   background: linear-gradient(rgba(189, 212, 223, 0.1) 0%, rgba(145, 184, 201, 0.1) 100%), rgb(20, 67, 88);
   border-top-left-radius: 1550px;
