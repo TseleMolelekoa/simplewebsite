@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import axios from 'axios';
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push } from 'firebase/database';
+import { getDatabase, push, ref } from 'firebase/database';
+import React, { useState } from 'react';
 import "./contactPage.css";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyAnPA0wJ18jdleLYsvck4_r3a9BVSyaXjo",
@@ -19,7 +21,9 @@ const app = initializeApp(firebaseConfig);
 // Get a reference to the database service
 const database = getDatabase(app);
 
+// Define ContactPage component
 const ContactPage = () => {
+    // State to hold form data
     const [userData, setUserData] = useState({
         name: "",
         email: "",
@@ -27,6 +31,7 @@ const ContactPage = () => {
         message: ""
     });
 
+    // Handler function for input change
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setUserData({ ...userData, [name]: value });
@@ -50,35 +55,57 @@ const ContactPage = () => {
             .catch((error) => {
                 console.error("Error sending message to Firebase:", error);
             });
+       // Send the form data to the server
+    axios.post('http://localhost:3000/send-email', {
+        name: userData.name,
+        email: userData.email,
+        phone: userData.phone,
+        message: userData.message
+    })
+    
+    .then((response) => {
+        if (response.status === 200) {
+            console.log("Email sent successfully");
+            // Clear the form fields by resetting the state
+            setUserData({
+                name: "",
+                email: "",
+                phone: "",
+                message: ""
+            });
+        } else {
+            console.error("Error sending email:", response.data);
+        }
+    })
     };
-
-    return(
-        <div className='container'>
-            <h3 className='heading'>Get In Touch</h3>
-            <div className="Contact">
-                <form id="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <circle/>
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={userData.name} onChange={handleInputChange} placeholder="Enter Your Full Name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" value={userData.email} onChange={handleInputChange} placeholder="Enter Your E-mail" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" value={userData.phone} onChange={handleInputChange} placeholder="Enter Your Phone Number" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Message:</label>
-                        <textarea id="message" name="message" value={userData.message} onChange={handleInputChange} placeholder="Your message"></textarea>
-                    </div>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
+ // Render the component
+ return (
+    <div className='container'>
+        <h3 className='heading'>Get In Touch</h3>
+        <div className="Contact">
+            <form id="contact-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" name="name" value={userData.name} onChange={handleInputChange} placeholder="Enter Your Full Name" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="email" value={userData.email} onChange={handleInputChange} placeholder="Enter Your E-mail" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value={userData.phone} onChange={handleInputChange} placeholder="Enter Your Phone Number" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="message">Message:</label>
+                    <textarea id="message" name="message" value={userData.message} onChange={handleInputChange} placeholder="Your message"></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
         </div>
-    );
+    </div>
+);
 };
 
+// Export ContactPage component
 export default ContactPage;
