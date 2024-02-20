@@ -4,6 +4,7 @@ import HomePage from './components/HomePage/index';
 import Services from './components/Services/index';
 import AboutMe from './components/about/index';
 import ProjectsPage from "./components/Projects/index";
+import GetInTouchForm from './components/GetInTouch/GetInTouch';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <div className='projects'>
           <ProjectsPage />
         </div>
+        <GetInTouchForm/>
       </div>
     </Router>
   );
