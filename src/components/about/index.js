@@ -2,7 +2,6 @@ import React from 'react';
 import Circle from '../circle'; // Corrected import statement
 import profileImage from '../assets/_MG_1509_1.jpg'; // Import your profile image
 import './about.css'; // Import your CSS file
-import Header from '../Header';
 
 const AboutMe = () => {
   return (
@@ -23,6 +22,17 @@ const AboutMe = () => {
           </div>
         </div>
         </div>
+        <footer className="footer">
+        <ul className="social-links">
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
+          <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-discord"></i></a></li>
+          <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></a></li>
+        </ul>
+        <p className="copyright">
+          &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
+        </p>
+      </footer>
         </div>
   );
 }

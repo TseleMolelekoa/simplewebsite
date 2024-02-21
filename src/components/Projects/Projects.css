@@ -6,7 +6,6 @@
     height: 100%;
     left: 671px;
     top: -15px;
-    border: 1px solid #000000;
     opacity: 0.74;
     border-radius: 30px;
     margin-left: -670px;
@@ -244,7 +243,7 @@
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
-    flex-wrap:nowrap; /* Allows cards to wrap to the next line if needed */
+    flex-direction:column ; /* Allows cards to wrap to the next line if needed */
     margin-top: 20px; /* Adjust margin as needed */
     margin-left: 150px;
     
@@ -257,8 +256,8 @@
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px; 
-    padding: 50px; 
-    display: flex;
+    padding: 50px;
+
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -280,12 +279,12 @@
     top: 15px;
     left: 50%; 
     transform: translateX(-50%); 
-    z-index: 1; 
+    z-index: -1; 
 }
 .button-container2 {
     display: flex;
     justify-content: center;
-    margin-top: 550px; 
+    margin-top: 1000px; 
     position:absolute;
     height:50px;
 }
@@ -320,3 +319,41 @@
     background-color: #101110;
     color: rgb(41, 37, 37);
 }
+/* Media query for smartphones */
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 50%; /* Adjust width for smaller screens */
+        margin-left: -50px;
+        height: 10vh;
+        width: 50%;
+    }
+    .h3{
+        font-family:'jaldi';
+        font-size: 12px;
+    }
+}
+  
+  /* Media query for tablets */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .bg {
+      left: 50%;
+      margin-left: -50%;
+      border-radius: 20px;
+    }
+  
+    .heading {
+      font-size: 32px;
+    }
+  
+    .projects-page {
+      border-radius: 20px;
+    }
+  
+    .component1 {
+      width: 70%;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }

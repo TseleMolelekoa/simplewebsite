@@ -2,38 +2,10 @@
 .body-image {
   background-image: url(../assets/animated-man-computer-coding-nae6mec378lsg1i3.gif);
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   width: 98vw;
-}
-.welcome-Text{
-    /* Welcome to my website */
-position: relative; /* Make the container positioned */
-width: 294px;
-height: 100px;
-left: 50px;
-bottom: -200px;
-display: flex;
-font-family: 'Jaldi';
-font-style: normal;
-font-weight: 170px;
-font-size: 16px;
-line-height: 31px;
-text-align: center;
-letter-spacing: 0.75em;
-text-transform: uppercase;
-color: #a5dae7;
-}
-.background-wrapper {
-  position: absolute;
-  width: 500px;
-  height: 1000px;
-  left: 1390px;
-  top: -43px;
-  background: linear-gradient(rgba(189, 212, 223, 0.1) 0%, rgba(145, 184, 201, 0.1) 100%), rgb(20, 67, 88);
-  border-top-left-radius: 1550px;
-  
 }
 /* Container for buttons */
 .button-container {
@@ -69,7 +41,7 @@ color: #a5dae7;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   align-content: space-between;
 }
 

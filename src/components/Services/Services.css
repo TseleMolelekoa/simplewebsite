@@ -1,6 +1,6 @@
 .flip-card-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   border-radius: 100px; /* Adding border radius to the container */
   background-color: cadetblue;
@@ -318,4 +318,53 @@
 .icon {
    font-size: 15px;
   }
-  
+  /* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .flip-card-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 10px; /* Add padding to the container */
+    border-radius: 50px; /* Remove border radius */
+    width: 95%;
+  }
+
+  .component1 {
+    width: 100%; /* Adjust width to fit the screen */
+    height: auto;
+    position: static; /* Remove absolute positioning */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  /* Adjust other component styles as needed */
+
+  .flip-card {
+    width: 100%; /* Adjust width to fit the screen */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+
+  }
+
+  /* .flip-card-inner {
+    height:fit-content;
+  } */
+
+  .flip-card-front{
+    background-color: #1eb6b6;
+  }
+  .flip-card-back {
+    width: 60%; /* Adjust width to fit the card */
+    height: 100%; /* Adjust height to fit the card */
+    border-radius: 50%; /* Remove border radius */
+  }
+
+  .flip-card ul li {
+    margin-bottom: -5px; /* Adjust margin for list items */
+  }
+
+  .heading {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  .icon {
+    font-size: 12px; /* Adjust font size */
+  }
+}
