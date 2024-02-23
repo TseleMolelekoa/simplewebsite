@@ -41,7 +41,7 @@ const HomePage = () => {
             <button className="download">Download CV</button>
           </div>
           <div className="contact-button">
-            <button className="contact">Contact Me</button>
+            <button className="contact"><a href="#contacts">Contact Me</a></button>
           </div>
         </div>
       </div>
