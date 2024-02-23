@@ -1,17 +1,11 @@
 {
   "hosting": {
-    "site": "tsele-moleleko",
-    "public": "build",
+    "site":"tsele-moleleko",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
