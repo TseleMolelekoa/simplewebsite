@@ -82,12 +82,14 @@ const ExperienceCard = () => {
 
 const Services = () => {
   return (
-    <div className="app">
-      <h1 className='heading'>Services</h1>
-      <div className="flip-card-container">
-        <SkillsCard />
-        <EducationCard />
-        <ExperienceCard />
+    <div id='services'>
+      <div className="app">
+        <h1 className='heading'>Services</h1>
+        <div className="flip-card-container">
+          <SkillsCard />
+          <EducationCard />
+          <ExperienceCard />
+        </div>
       </div>
     </div>
   );

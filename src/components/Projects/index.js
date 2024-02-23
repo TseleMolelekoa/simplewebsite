@@ -5,7 +5,7 @@ import cogGif from '../assets/cogs-4218_512.gif';
 
 const Projects = () => {
     return (
-        <div>
+        <div id="projects">
             <h1 className="heading">Projects</h1>
             <div className="projects-page">
                 <div className="gif-container">

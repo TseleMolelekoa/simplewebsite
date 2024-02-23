@@ -1,21 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import HomePage from './components/HomePage/index';
-import Services from './components/Services/index';
+import HomePage from './components/HomePage';
 import AboutMe from './components/about/index';
-import ProjectsPage from './components/Projects/index';
-import ContactPage from './components/contactPage';
+import Services from './components/Services/index';
+import Projects from './components/Projects/index';
+import ContactForm from './components/contactPage/index';
+
+
 
 function App() {
   return (
     <Router>
-      <div>
-        <HomePage />
-        <AboutMe />
-        <Services />
-        <ProjectsPage />
-        {/* <ContactPage />  */}
-      </div>
+      <HomePage />
+      <AboutMe/>
+      <Services />
+      <Projects/>
+      <ContactForm/>
     </Router>
   );
 }

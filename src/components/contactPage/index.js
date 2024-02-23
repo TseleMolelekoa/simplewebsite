@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push } from 'firebase/database';
+import { getDatabase, push, ref } from 'firebase/database';
+import React, { useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from 'axios';
 import "./contactPage.css";
+
 
 // Firebase configuration
 const firebaseConfig = {
@@ -15,88 +18,118 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase app
-const contactPage  = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
-// Define the ContactForm component
-const ContactForm = () => {
-  const [userData, setUserData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+const ContactPage = () => {
+  // Define state for email, phone number, and message
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phonenumber, setPhonenumber] = useState('');
+  const [message, setMessage] = useState('');
+
+  const [recaptchaValue, setRecaptchaValue] = useState(null); // State to store reCAPTCHA value
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setUserData({
-      ...userData,
-      [name]: value
-    });
+    switch (name) {
+      case 'name':
+        setName(value);
+        break;
+      case 'email':
+        setEmail(value);
+        break;
+      case 'phone':
+        setPhonenumber(value);
+        break;
+      case 'message':
+        setMessage(value);
+        break;
+      default:
+        break;
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Check if reCAPTCHA is verified
+    if (!recaptchaValue) {
+      alert("Please verify that you're not a robot.");
+      return;
+    }
+
     try {
       // Save form data to Firebase Real-time Database
       const database = getDatabase();
       const contactsRef = ref(database, 'contacts');
-      push(contactsRef, {
-        ...userData,
+      const newContactRef = push(contactsRef, {
+        name,
+        email,
+        phone: phonenumber,
+        message,
         timestamp: Date.now()
       });
 
       // Clear form fields
-      setUserData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
+      setName('');
+      setEmail('');
+      setPhonenumber('');
+      setMessage('');
+
+      // Extract the Firebase key of the newly added contact
+      const contactKey = newContactRef.key;
+
+      // Call a Cloud Function (or another backend service) to send email
+      await axios.post("<YOUR_FUNCTION_URL>", {
+        email,
+        subject: "New Contact Form Submission",
+        message: `Name: ${name}\nEmail: ${email}\nPhone: ${phonenumber}\nMessage: ${message}\nFirebase Key: ${contactKey}`
       });
+
+      // Success message
+      console.log("Email sent successfully!");
     } catch (error) {
-      console.error('Error saving data to Firebase:', error);
+      console.error('Error saving data to Firebase or sending email:', error);
     }
+  };
+
+  const onChange = (value) => {
+    // Update the reCAPTCHA value
+    setRecaptchaValue(value);
   };
 
   // Render the component
   return (
-    <div className='container'>
+    <div id='contacts'>
       <h3 className='heading'>Get In Touch</h3>
       <div className="Contact">
         <form id="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" value={userData.name} onChange={handleInputChange} placeholder="Enter Your Full Name" />
+            <input type="text" id="name" name="name" value={name} onChange={handleInputChange} placeholder="Enter Your Full Name" />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={userData.email} onChange={handleInputChange} placeholder="Enter Your E-mail" />
+            <input type="email" id="email" name="email" value={email} onChange={handleInputChange} placeholder="Enter Your E-mail" />
           </div>
           <div className="form-group">
             <label htmlFor="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" value={userData.phone} onChange={handleInputChange} placeholder="Enter Your Phone Number" />
+            <input type="tel" id="phone" name="phone" value={phonenumber} onChange={handleInputChange} placeholder="Enter Your Phone Number" />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" value={userData.message} onChange={handleInputChange} placeholder="Your message"></textarea>
+            <textarea id="message" name="message" value={message} onChange={handleInputChange} placeholder="Your message"></textarea>
           </div>
           <button type="submit">Send</button>
+          <ReCAPTCHA
+            sitekey="6LfWEnwpAAAAAKAo_8lVnuzgduZXdSFvxDFGuK7u"
+            onChange={onChange}
+          />
         </form>
       </div>
-      <footer className="footer">
-        <ul className="social-links">
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
-          <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-discord"></i></a></li>
-          <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></a></li>
-        </ul>
-        <p className="copyright">
-          &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
-        </p>
-      </footer>
+      {/* Footer and other elements */}
     </div>
   );
 };
 
-// Export ContactForm component
-export default ContactForm;
+export default ContactPage;

@@ -26,11 +26,12 @@ const HomePage = () => {
           >
             <h2>Menu</h2>
           </MenuItem>
-          <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
-          <MenuItem icon={<PeopleOutlinedIcon />}>About</MenuItem>
-          <MenuItem icon={<ReceiptOutlinedIcon />}>Services</MenuItem>
-          <MenuItem icon={<SettingsApplicationsRoundedIcon />}>Projects</MenuItem>
-          <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
+          <MenuItem icon={<HomeOutlinedIcon />}>
+            <a href="#HomePage"></a>Home</MenuItem>
+          <MenuItem icon={<PeopleOutlinedIcon />} ><a href="#bg-color">About</a></MenuItem>
+          <MenuItem icon={<ReceiptOutlinedIcon />}><a href="#services">Services</a></MenuItem>
+          <MenuItem icon={<SettingsApplicationsRoundedIcon />}><a href="#projects">Projects</a></MenuItem>
+          <MenuItem icon={<ContactsOutlinedIcon />}><a href="#contacts">Contacts</a></MenuItem>
         </Menu>
       </Sidebar>
       <div className="bg-gif">

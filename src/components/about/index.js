@@ -5,7 +5,7 @@ import './about.css'; // Import your CSS file
 
 const AboutMe = () => {
   return (
-    <div className='bg-color'>
+    <div id='bg-color'>
         <h2 className="about-heading">About Tsele Molelekoa<br/>A Junior Software-Developer</h2>
       <div className="about-me-container">
         <circle />
